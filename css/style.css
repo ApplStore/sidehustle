@@ -31,6 +31,7 @@ body {
     --darkgray: #808080;
 
     --black: #1d1d1f;
+    --trueblack: #000000;
     --white: #f5f5f7;
 }
 
@@ -137,6 +138,11 @@ nav {
     grid-column: 2;
 }
 
+.menu-screen a {
+    text-decoration: none;
+    color: var(--white);
+}
+
 .menu-screen li {
     font-family: 'Lexend';
     color: var(--white);
@@ -152,13 +158,10 @@ nav {
     cursor: pointer;
 }
 
-.menu-screen li:hover {
+.menu-screen a:hover {
     color: var(--darkgreen);
     transition: all 0.3s ease;
 }
-
-
-
 
 .overview-container {
     display: flex;
@@ -441,8 +444,7 @@ footer {
     background-color: var(--white);
     padding: 20px;
     display: grid;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     font-family: 'Open Sans';
     font-size: 16px;
     color: #555;
@@ -451,14 +453,15 @@ footer {
 footer ul {
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-template-rows: auto;
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
 
 footer li {
   text-align: center;
-  padding: 2px;
+  padding: 0 10px;
+  margin: 0 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
@@ -482,7 +485,78 @@ footer span {
 }
 
 
+/*GOLF.HTML*/
 
+.title-text-golf {
+    bottom: 10%;
+}
+
+.topic-text {
+    padding: 20px;
+
+}
+
+.topic-text p{
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    text-align: justify;
+    font-size: 21px;
+    color: var(--trueblack);
+    line-height: 2;
+}
+
+
+.ideas-grid {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    gap: 40px;
+}
+
+.quickview-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: min-content;
+    gap: 50px;
+    padding: 50px;
+    outline: #6a6264 solid ;
+    color: var(--black);
+}
+
+.quickview-container h2 {
+    font-family: 'Lexend';
+    font-size: 45px;
+}
+
+.quickview-step-box {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 20px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.quickview-step-box span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    align-self: center;
+}
+
+
+.quickview-step-box p {
+    font-family: 'Open Sans';
+    font-size: 24px;
+    text-align: left;
+    line-height: 1;
+}
 
 
 
@@ -583,6 +657,14 @@ footer span {
 
     .eg-box p {
         font-size: 2.2vw;
+    }
+
+    .ideas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-text p {
+        font-size: 16px;
     }
 }
 

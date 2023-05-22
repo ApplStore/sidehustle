@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 
+<!-- Grupper av element är kommenterade, sedan är all kod 
+logiskt skriven med semantiska element som tydliggör tolkningen. -->
+
 <html>
     <head lang="sv">
         <meta charset="UTF-8">
@@ -12,7 +15,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <!-- Importerar api för animationer -->
         <script src="https://unpkg.com/scrollreveal"></script>
     </head>
 
@@ -22,37 +27,42 @@
                 <img src="./media/img/logo.png" alt="">
             </div>
 
+            <!-- Knapp för att öppna nav -->
             <div class="menu-container menu-btn">
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
             </div>
 
+            <!-- nav (helskärm) -->
             <div class="menu-screen">
                 <ul>
-                    <li class="menu-item-main menu-item-home">Hem</li>
-                    <li class="menu-item-main">Ideer</li>
-                    <li class="menu-item-sub">Golfbollar</li>
-                    <li class="menu-item-sub">Investera</li>
-                    <li class="menu-item-sub">Dropshipping</li>
-                    <li class="menu-item-sub">Copywriting</li>
+                    <li class="menu-item-main menu-item-home"><a href="index.html" class="">Hem</a></li>
+                    <li class="menu-item-main"><a href="./index.html#ideas" class="">Ideer</a></li>
+                    <li class="menu-item-sub"><a href="./golf.html" class="">Golfbollar</a></li>
+                    <li class="menu-item-sub"><a href="./invest.html" class="">Investera</a></li>
+                    <li class="menu-item-sub"><a href="./dropshipping.html" class="">Dropshipping</a></li>
+                    <li class="menu-item-sub"><a href="./copywriting.html" class="">Copywriting</a></li>
                 </ul>
             </div>
 
         </nav>
 
+        <!-- Titel och bild för överblick -->
         <div class="overview-container reveal-static">
             <img class="overview-img" src="./media/img/vault.jpg" alt="Bakgrundsbild">
             <h1 class="title-text">Få ut det mesta ur ekonomin</h1>
             <h2 class="subtitle-text">Tjäna pengar med en passiv inkomst</h2>
         </div>
 
+        <!-- Aktiegrafen som ligger bakom rutorna -->
         <div class="chart-container reveal-static">
             <img src="./media/img/candlestick.png" alt="">
             <div class="chart-slide"></div>
         </div>
 
         <main>
+            <!--  -->
             <div class="steps-container">
                 <div class="reg-box steps-box reveal-default">
                     <img src="./media/img/lightbulb.svg" alt="">
@@ -71,18 +81,21 @@
                 </div>
             </div>
 
+            <!-- Agerar som spacing -->
             <span class="divider"></span>
             
-            <div class="ideas-title reg-box reveal-default">
+            <!-- Subtitel -->
+            <div class="ideas-title reg-box reveal-default" id="ideas">
                 <h2>Ideer</h2>
             </div>
 
+            <!-- En grid för- och själva rutorna -->
             <div class="eg-container">
                 <div class="eg-box reveal-default">
                     <img src="./media/img/golfball-diver.jpg" alt="">
                     <h3>Sälja golfbollar</h3>
                     <p>En marknad med hög efterfrågan. Det ända som krävs är ett par timmar och ett Blocket konto.</p>
-                    <a href="">Utforska</a>
+                    <a href="./golf.html">Utforska</a>
                 </div>
                 <div class="eg-box reveal-default">
                     <img src="./media/img/trading.jpg" alt="">
@@ -104,6 +117,7 @@
                 </div>
             </div>
 
+            <!-- Knapp med JS (no-js vänlig) -->
             <div class="more-ideas reveal-default">
                 <div class="more-ideas-btn">Fler ideer</div>
             </div>
